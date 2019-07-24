@@ -1,0 +1,1376 @@
+[
+   {
+      "id": "1563969158865",
+      "defaultState": {
+         "size": {
+            "height": 2,
+            "width": 2
+         },
+         "type": "link",
+         "bgColor": "#128023",
+         "fgColor": "#ffffff",
+         "iconClass": null,
+         "title": "MS Vacation",
+         "websiteLink": null,
+         "badge": null,
+         "imgSrc": null,
+         "adaptiveCardConfig": null,
+         "imageSrc": "https://image.flaticon.com/icons/png/512/410/410733.png",
+         "redirectLink": "https://msvacation/"
+      },
+      "expandedState": {
+         "size": {
+            "height": 4,
+            "width": 4
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=2019-07-24T00:00:00.167Z&enddatetime=2019-07-24T11:59:59.16",
+            "payload": {
+               "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=$$today$$T00:00:00.167Z&enddatetime=$$today$$T11:59:59.16",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "ColumnSet",
+                     "columns": [{
+                           "type": "Column",
+                           "width": "50px",
+                           "items": [{
+                              "type": "Image",
+                              "altText": "",
+                              "width": "40px",
+                              "url": "https://store-images.s-microsoft.com/image/apps.10465.9007199266367162.63ae4a2f-83bb-47b5-9314-a061b0de5d94.c031d0ac-cec0-4fe3-a0c9-c929f60d3035?mode=scale&q=90&h=270&w=270&background=%230078D7",
+                              "spacing": "None",
+                              "style": "Person",
+                              "height": "40px"
+                           }]
+                        },
+                        {
+                           "type": "Column",
+                           "width": "stretch",
+                           "items": [{
+                              "type": "TextBlock",
+                              "text": "Today",
+                              "size": "ExtraLarge",
+                              "weight": "Bolder",
+                              "color": "Accent"
+                           }]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                           "type": "TextBlock",
+                           "text": "{subject}",
+                           "weight": "Bolder",
+                           "size": "medium",
+                           "wrap": true
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{location.displayName}",
+                           "wrap": true
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{{TIME({substr(start.dateTime,0,19)}Z)}} - {{TIME({substr(end.dateTime,0,19)}Z)}}",
+                           "wrap": true
+                        }
+                     ],
+                     "$data": "{value}",
+                     "style": "emphasis",
+                     "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "{webLink}"
+                     },
+                     "separator": true,
+                     "backgroundImage": {
+                        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
+                        "fillMode": "Repeat"
+                     },
+                     "spacing": "Small",
+                     "$when": "{value}"
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "auth": "graph"
+         }
+      }
+   },
+   {
+      "id": "1563969387361",
+      "defaultState": {
+         "size": {
+            "width": 2,
+            "height": 2
+         },
+         "type": "link",
+         "title": "Create ticket",
+         "iconClass": "phonelink",
+         "bgColor": "#1ba1e2",
+         "fgColor": "#ffffff",
+         "redirectLink": "https://gethelp.corp.microsoft.com/"
+      }
+   },
+   {
+      "id": "1563969814496",
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "bgColor": "#6a00ff",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik05LjMzMzE5LDJIMzAuNjY2NTZhMS4zMzMzMSwxLjMzMzMxLDAsMCwxLDEuMzMzMzEsMS4zMzMzMVYyOC42NjY2NkExLjMzMzMxLDEuMzMzMzEsMCwwLDEsMzAuNjY2NTYsMzBIOS4zMzMyNUExLjMzMzM3LDEuMzMzMzcsMCwwLDEsNy45OTk4OCwyOC42NjY2VjMuMzMzMzFBMS4zMzMzMSwxLjMzMzMxLDAsMCwxLDkuMzMzMTksMloiIGZpbGw9IiNjYTY0ZWEiLz48cGF0aCBkPSJNMzEuOTk5ODgsMy4zMzMzN0ExLjMzMzM0LDEuMzMzMzQsMCwwLDAsMzAuNjY2NSwyLjAwMDA2SDkuMzMzMTlBMS4zMzMyOCwxLjMzMzI4LDAsMCwwLDcuOTk5ODgsMy4zMzMzN1YyOC42NjY2OEExLjMzMzI5LDEuMzMzMjksMCwwLDAsOS4zMzMxOSwzMEgyNC45OTk4MkwzMS45OTk4OCw5LjAwMDA2WiIgZmlsbD0iI2NhNjRlYSIvPjxwb2x5Z29uIHBvaW50cz0iMzIgOSAyNSA5IDI1IDE2IDI4LjUgMTkuMTk1IDMyIDE2IDMyIDkiIGZpbGw9IiNhZTRiZDUiLz48cG9seWdvbiBwb2ludHM9IjMyIDE2IDI1IDE2IDI1IDIzIDI4LjUgMjYuMzk1IDMyIDIzIDMyIDE2IiBmaWxsPSIjOTMzMmJmIi8+PHBhdGggZD0iTTI0Ljk5OTg1LDIzaDdhMCwwLDAsMCwxLDAsMHY1LjY2NjY3QTEuMzMzMzMsMS4zMzMzMywwLDAsMSwzMC42NjY1MiwzMEgyNC45OTk4NWEwLDAsMCwwLDEsMCwwVjIzQTAsMCwwLDAsMSwyNC45OTk4NSwyM1oiIGZpbGw9IiM3NzE5YWEiLz48cGF0aCBkPSJNMTYuNjY2NjMsN0g4VjI2aDguNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE4LDI0LjY2NjYzVjguMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE2LjY2NjYzLDdaIiBvcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMTUuNjY2NjMsOEg4VjI3aDcuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE3LDI1LjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBkPSJNMTUuNjY2NjMsOEg4VjI1aDcuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE3LDIzLjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMTQuNjY2NjMsOEg4VjI1aDYuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE2LDIzLjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE0LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBpZD0iQmFja19QbGF0ZSIgZGF0YS1uYW1lPSJCYWNrIFBsYXRlIiBkPSJNMS4zMzMzMyw4SDE0LjY2NjY5QTEuMzMzMzQsMS4zMzMzNCwwLDAsMSwxNiw5LjMzMzM0VjIyLjY2NjY2QTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxNC42NjY3LDI0SDEuMzMzMzRBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDAsMjIuNjY2NjZWOS4zMzMzM0ExLjMzMzMzLDEuMzMzMzMsMCwwLDEsMS4zMzMzMyw4WiIgZmlsbD0iIzc3MTlhYSIvPjxwYXRoIGQ9Ik00LjAwMTQ5LDExSDYuMTMxbDMuNjU2NDUsNi43MzE2M3EuMjg1NzUuNDM1NTQuNDI4NjIuNzAwNzZoLjAyNzIxYTkuNDkzMTQsOS40OTMxNCwwLDAsMS0uMDYxMjMtMS4zMjY2N1YxMWgxLjgxNjUyVjIxSDEwLjAwNTEzTDYuMTkyMiwxNC4zNzA3M2E1LjEzMzM2LDUuMTMzMzYsMCwwLDEtLjM4NzgtLjY4NzE0aC0uMDM0YTEzLjYyODIsMTMuNjI4MiwwLDAsMSwuMDU0NDIsMS40NTU5M1YyMUg0LjAwMTQ5WiIgZmlsbD0iI2ZmZiIvPjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=",
+         "redirectLink": "https://www.office.com/launch/onenote?auth=2",
+         "fgColor": "#dc4fad"
+      }
+   },
+   {
+      "id": "1563969935744",
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "redirectLink": "https://www.office.com/launch/word?auth=2",
+         "bgColor": "#1ba1e2",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0zMC42NjY2NSwySDkuMzMzMjdBMS4zMzMzMiwxLjMzMzMyLDAsMCwwLDgsMy4zMzMzMVY5bDEyLDMuNUwzMiw5VjMuMzMzMzFBMS4zMzMzMywxLjMzMzMzLDAsMCwwLDMwLjY2NjY1LDJaIiBmaWxsPSIjNDFhNWVlIi8+PHBvbHlnb24gcG9pbnRzPSIzMiA5IDggOSA4IDE2IDIwIDE5LjUgMzIgMTYgMzIgOSIgZmlsbD0iIzJiN2NkMyIvPjxwb2x5Z29uIHBvaW50cz0iMzIgMTYgOCAxNiA4IDIzIDIwIDI2LjUgMzIgMjMgMzIgMTYiIGZpbGw9IiMxODVhYmQiLz48cGF0aCBkPSJNMzIsMjNIOHY1LjY2NjY2QTEuMzMzMzQsMS4zMzMzNCwwLDAsMCw5LjMzMzM0LDMwSDMwLjY2NjdBMS4zMzMzNCwxLjMzMzM0LDAsMCwwLDMyLDI4LjY2NjY2WiIgZmlsbD0iIzEwM2Y5MSIvPjxwYXRoIGQ9Ik0xNi42NjY2NSw3SDhWMjZoOC42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTgsMjQuNjY2NjNWOC4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTYuNjY2NjUsN1oiIG9wYWNpdHk9IjAuMSIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjdoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjUuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjVoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNC42NjY2NSw4SDhWMjVoNi42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTYsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTQuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGlkPSJCYWNrX1BsYXRlIiBkYXRhLW5hbWU9IkJhY2sgUGxhdGUiIGQ9Ik0xLjMzMzI5LDhIMTQuNjY2NjZBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDE2LDkuMzMzMzNWMjIuNjY2NjZBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDE0LjY2NjY1LDI0SDEuMzMzM0ExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMCwyMi42NjY2NlY5LjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxLjMzMzI5LDhaIiBmaWxsPSIjMTg1YWJkIi8+PHBhdGggaWQ9IkxldHRlciIgZD0iTTExLjk1LDIxaC0xLjhsLTIuMS02LjlMNS44NSwyMUg0LjA1bC0yLTEwaDEuOGwxLjQsNywyLjEtNi44aDEuNWwyLDYuOCwxLjQtN2gxLjdaIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iLTAuMDAwMDQiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=",
+         "title": ""
+      }
+   },
+   {
+      "id": "1563970022161",
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "redirectLink": "https://www.office.com/launch/word?auth=2",
+         "bgColor": "#fa6800",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0xNy45OTk2NCwyYTE0LjA0MTE0LDE0LjA0MTE0LDAsMCwwLTE0LDE0bDE3LjczNywzLjczN1oiIGZpbGw9IiNlZDZjNDciLz48cGF0aCBkPSJNMTcuOTk5NjQsMmExNC4wNDExNCwxNC4wNDExNCwwLDAsMSwxNCwxNGwtNyw0Ljc1NzkxLTctNC43NTc5MVoiIGZpbGw9IiNmZjhmNmIiLz48cGF0aCBkPSJNMTcuOTk5NjMsMzBhMTQuMDQxMTQsMTQuMDQxMTQsMCwwLDAsMTQtMTRoLTI4QTE0LjA0MTE1LDE0LjA0MTE1LDAsMCwwLDE3Ljk5OTYzLDMwWiIgZmlsbD0iI2QzNTIzMCIvPjxwYXRoIGQ9Ik0xNi42NjY0NCw3SDcuMzA1MTFhMTMuOTEzNjgsMTMuOTEzNjgsMCwwLDAsLjkzMDczLDE5aDguNDMwNmExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMS4zMzMzOC0xLjMzMzM3VjguMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE2LjY2NjQ0LDdaIiBvcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMTUuNjY2NDQsOEg2LjUzODc2QTEzLjkwNiwxMy45MDYsMCwwLDAsOS4zODQzNCwyN2g2LjI4MjFhMS4zMzczMiwxLjMzNzMyLDAsMCwwLDEuMzMzMzgtMS4zMzMzN1Y5LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNS42NjY0NCw4WiIgb3BhY2l0eT0iMC4yIi8+PHBhdGggZD0iTTE1LjY2NjQ0LDhINi41Mzg3NmExMy44ODk5MSwxMy44ODk5MSwwLDAsMCwuNzY2MzUsMTdoOC4zNjEzM2ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMS4zMzMzOC0xLjMzMzM3VjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjQ0LDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBkPSJNMTQuNjY2NDQsOEg2LjUzODc2YTEzLjg4OTkxLDEzLjg4OTkxLDAsMCwwLC43NjYzNSwxN2g3LjM2MTMzYTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxLjMzMzM4LTEuMzMzMzdWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTQuNjY2NDQsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGlkPSJCYWNrX1BsYXRlIiBkYXRhLW5hbWU9IkJhY2sgUGxhdGUiIGQ9Ik0xLjMzMzMzLDhIMTQuNjY2NjlBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDE2LDkuMzMzMzRWMjIuNjY2NjZBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDE0LjY2NjcsMjRIMS4zMzMzNEExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMCwyMi42NjY2NlY5LjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxLjMzMzMzLDhaIiBmaWxsPSIjYzQzZTFjIi8+PHBhdGggZD0iTTcuOTk3NSwxMWE0LjE2NzcxLDQuMTY3NzEsMCwwLDEsMi43NTQ4NC44MDUxLDIuODc3NTcsMi44Nzc1NywwLDAsMSwuOTU1NjIsMi4zMzEyOSwyLjcyNjA5LDIuNzI2MDksMCwwLDEtLjQ3MjU1LDEuNTg3MjQsMy4xNjM3MSwzLjE2MzcxLDAsMCwxLTEuMzQ0MTcsMS4xODY3Niw0LjU2OTc1LDQuNTY5NzUsMCwwLDEtMi4wMTk3Ni40MjM0NEg1Ljk2MDI1VjIxSDRWMTFaTTUuOTYwMjUsMTUuNjgzMTlINy42NDc0NmEyLjE5MzgyLDIuMTkzODIsMCwwLDAsMS40OTExOC0uNDQ0NDQsMS4xMDY2MiwxLjEwNjYyLDAsMCwwLC41MDQwNy0xLjAyNTM1cTAtMS42NTkyMS0xLjkzMjI1LTEuNjU5MjFINS45NjAyNVoiIGZpbGw9IiNmOWY3ZjciLz48cmVjdCB4PSIwLjAwMDAzIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiLz48L2c+PC9zdmc+",
+         "title": ""
+      }
+   },
+   {
+      "id": "1563970101329",
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "redirectLink": "https://www.office.com/launch/excel?auth=2",
+         "bgColor": "#128023",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0yMCwySDkuMzMzMjVBMS4zMzMzMiwxLjMzMzMyLDAsMCwwLDcuOTk5OTQsMy4zMzMzMVY5TDIwLDE2bDYsMi41MzE1NkwzMiwxNlY5WiIgZmlsbD0iIzIxYTM2NiIvPjxyZWN0IHg9IjcuOTk5OTQiIHk9IjguOTk5OTkiIHdpZHRoPSIxMi4wMDAwNiIgaGVpZ2h0PSI3IiBmaWxsPSIjMTA3YzQxIi8+PHBhdGggZD0iTTMwLjY2NjYzLDJIMjBWOUgzMlYzLjMzMzMxQTEuMzMzMzMsMS4zMzMzMywwLDAsMCwzMC42NjY2MywyWiIgZmlsbD0iIzMzYzQ4MSIvPjxwYXRoIGQ9Ik0yMCwxNkg3Ljk5OTk0VjI4LjY2NjYzQTEuMzMzMzgsMS4zMzMzOCwwLDAsMCw5LjMzMzI1LDMwSDMwLjY2NjYzQTEuMzMzMzksMS4zMzMzOSwwLDAsMCwzMiwyOC42NjY2M1YyM1oiIGZpbGw9IiMxODVjMzciLz48cmVjdCB4PSIyMCIgeT0iMTYiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiBmaWxsPSIjMTA3YzQxIi8+PHBhdGggZD0iTTE2LjY2NjY0LDdIOFYyNmg4LjY2NjYyQTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxOCwyNC42NjY2M1Y4LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNi42NjY2NCw3WiIgb3BhY2l0eT0iMC4xIi8+PHBhdGggZD0iTTE1LjY2NjY0LDhIOFYyN2g3LjY2NjYyQTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxNywyNS42NjY2M1Y5LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNS42NjY2NCw4WiIgb3BhY2l0eT0iMC4yIi8+PHBhdGggZD0iTTE1LjY2NjY0LDhIOFYyNWg3LjY2NjYyQTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxNywyMy42NjY2M1Y5LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNS42NjY2NCw4WiIgb3BhY2l0eT0iMC4yIi8+PHBhdGggZD0iTTE0LjY2NjY0LDhIOFYyNWg2LjY2NjYyQTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxNiwyMy42NjY2M1Y5LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNC42NjY2NCw4WiIgb3BhY2l0eT0iMC4yIi8+PHBhdGggaWQ9IkJhY2tfUGxhdGUiIGRhdGEtbmFtZT0iQmFjayBQbGF0ZSIgZD0iTTEuMzMzMzMsOEgxNC42NjY2OUExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMTYsOS4zMzMzNFYyMi42NjY2NkExLjMzMzMzLDEuMzMzMzMsMCwwLDEsMTQuNjY2NywyNEgxLjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwwLDIyLjY2NjY2VjkuMzMzMzNBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDEuMzMzMzMsOFoiIGZpbGw9IiMxMDdjNDEiLz48cGF0aCBkPSJNMy41MzM0OSwyMWwzLjIzNTctNS4wMTM5NUwzLjgwNTQ1LDExSDYuMTkwMzlsMS42MTc4NSwzLjE4Njg5cS4yMjMwNS40NTM0OS4zMDY4NC42NzY0M0g4LjEzNnEuMTYwMjgtLjM2MjQuMzM0NzMtLjcwNDMzTDEwLjIwMDE1LDExaDIuMTg5NjhMOS4zNDkzOSwxNS45NTgxNiwxMi40NjY1NCwyMUgxMC4xMzczOUw4LjI2ODUsMTcuNDk5M2EyLjkyMTU3LDIuOTIxNTcsMCwwLDEtLjIyMzE2LS40NjcyMkg4LjAxNzQ1YTIuMjA2NiwyLjIwNjYsMCwwLDEtLjIxNjE4LjQ1MzI3TDUuODc2NTgsMjFaIiBmaWxsPSIjZmZmIi8+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJub25lIi8+PC9nPjwvc3ZnPg==",
+         "title": ""
+      }
+   },
+   {
+      "id": "1563970187904",
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "bgColor": "#16499a",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0xMi4yMDI0NSwxMS4xOTI5MmwuMDAwMzEtLjAwMTEsNi43MTc2NSw0LjAyMzc5LDQuMDAyOTMtMS42ODQ1MS4wMDAxOC4wMDA2OEE2LjQ3NjgsNi40NzY4LDAsMCwxLDI1LjUsMTNjLjE0NzY0LDAsLjI5MzU4LjAwNjcuNDM4NzguMDE2MzlhMTAuMDAwNzUsMTAuMDAwNzUsMCwwLDAtMTguMDQxLTMuMDEzODFDNy45MzIsMTAuMDAyMTUsNy45NjU3LDEwLDgsMTBBNy45NjA3Myw3Ljk2MDczLDAsMCwxLDEyLjIwMjQ1LDExLjE5MjkyWiIgZmlsbD0iIzAzNjRiOCIvPjxwYXRoIGQ9Ik0xMi4yMDI3NiwxMS4xOTE4MmwtLjAwMDMxLjAwMTFBNy45NjA3Myw3Ljk2MDczLDAsMCwwLDgsMTBjLS4wMzQzLDAtLjA2ODA1LjAwMjE1LS4xMDIyMy4wMDI1OEE3Ljk5Njc2LDcuOTk2NzYsMCwwLDAsMS40MzczMiwyMi41NzI3N2w1LjkyNC0yLjQ5MjkyLDIuNjMzNDItMS4xMDgxOSw1Ljg2MzUzLTIuNDY3NDYsMy4wNjIxMy0xLjI4ODU5WiIgZmlsbD0iIzAwNzhkNCIvPjxwYXRoIGQ9Ik0yNS45Mzg3OCwxMy4wMTYzOUMyNS43OTM1OCwxMy4wMDY3LDI1LjY0NzY0LDEzLDI1LjUsMTNhNi40NzY4LDYuNDc2OCwwLDAsMC0yLjU3NjQ4LjUzMTc4bC0uMDAwMTgtLjAwMDY4LTQuMDAyOTMsMS42ODQ1MSwxLjE2MDc3LjY5NTI4TDIzLjg4NjExLDE4LjE5bDEuNjYwMDkuOTk0MzgsNS42NzYzMywzLjQwMDA3YTYuNTAwMiw2LjUwMDIsMCwwLDAtNS4yODM3NS05LjU2ODA1WiIgZmlsbD0iIzE0OTBkZiIvPjxwYXRoIGQ9Ik0yNS41NDYyLDE5LjE4NDM3LDIzLjg4NjExLDE4LjE5bC0zLjgwNDkzLTIuMjc5MS0xLjE2MDc3LS42OTUyOEwxNS44NTgyOCwxNi41MDQyLDkuOTk0NzUsMTguOTcxNjYsNy4zNjEzMywyMC4wNzk4NWwtNS45MjQsMi40OTI5MkE3Ljk4ODg5LDcuOTg4ODksMCwwLDAsOCwyNkgyNS41YTYuNDk4MzcsNi40OTgzNywwLDAsMCw1LjcyMjUzLTMuNDE1NTZaIiBmaWxsPSIjMjhhOGVhIi8+PC9nPjwvc3ZnPg==",
+         "redirectLink": "https://microsoft-my.sharepoint-df.com/_layouts/15/MySite.aspx?MySiteRedirect=AllDocuments"
+      }
+   },
+   {
+      "id": "1563970756007",
+      "defaultState": {
+         "size": {
+            "width": 2,
+            "height": 1
+         },
+         "type": "link",
+         "bgColor": "#ffffff",
+         "imageSrc": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAtCAYAAAAjkQw8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAEP0lEQVR4Xu2av2pUQRTG8xwpLcwDCHkA2TdIY5vGxiKlNqaxEYk2VoZ0VhGxk7USG2NjoRBQxKAsijGoJKJGJHD1N5yz3J17zv2TvdndyfUHH9mdO3M33zdzz0yWzGUJ8u3XUXa5v5f1NgbJ6PqTL+H3TjJwDMxdeZWcLj74lGbglplkJB6SwjSSisRDUphGUpF4aI3BYJBtbW0FHRwcSGu7mEZSkXgoQGDz8/PZ5uamtJTT7/ezxcXFMCYv2mJoX1tbk3ejMGELCwtZr9eTliKmkVQkHgqsrKyEYMqMK0wKfZeXl0PwrOzt7e3wmvvEeIEzjs8jcMZ7mEYcbTzeC7p01z/ZnL+1M+zH67gt1tX7Hwv3qC3xMALGdZURDqvOQ/taK9nDCrxu2GAacaQQlHUdMRmKTky+zeLH76PjBS/jR9AVi3F+rq6uypUiWnrW19elpRor8KWlpdDO/aowjThSxgn80Yv94ermdR59ImpLxo2AecoDUBLKVm/TWg9x4Fq+6t7DNOJIGSdwbVNxL4UJyF+rlIwbQvnIm6cO856fHpQBnaA65ANvGjaYRhwpbQaOlJfvfxaulUrGDaF8ECA1VeG9tfkpGlrdsqKBa+kqK1kWphFHykkF/vT198K1Usm4IZSPOFwCIZj8JOShXWswP8s2WaCfbshlE+lhGnGktBn4zYe7ciULr/PXKiXjAl750M2z6rFnhfM00JcV7E0Q11VenzJMI46Uz/t/wuNvaWf3UHrZgTNZvEe85oQCjIs/r1JhpMBq8zZI2uucyQmQek6Y9LeOeFyjD5NDn6ahm0YcNcUKPIbACf7stTeFz6uU3COY1pBYnbG0ZFSVC4WnhEBRDPfhnkzGcUI3jThSOE3oKo1FeArvGcdPhZXMk6Dw/sKdd4XPqiW5x3ADq1KTDc4rUbQROOjnNjnlmEYcKW3UcFa0lh9K1FgrnFWGyiCUJn9RAis43hjzgYOGXncDNY04UtoIHLGylcYnFMRAPXtXHes0mHjFelAmCJxylCcOHPQkVOcJMo04UtoKHOVLUOM/7xlUdexTNMC6K1EnKJ5IK3DgvlxjXBmmEUdKm4FTSigpwAbaqLQwiDJRt4YSCqHr5BAcY+PvQPKbZjyRXuCgm3NZ6KYRR0qbgSNWtnLv2dfCdVfexuYRf3fCOCaMtliE5x0LvcCZHPYS+nhfZJlGHCltB47yJxevT0HSf2wIloAIksmwgm4L00gqEg9JYRpJReIhKUwjqUg8JIVpJBWJh6QwjaQi8ZAUppFUJB6S4syNt7aZGVf4n0jxkBTPPxxm524f89u6KYmw+b2TDLwOlukqMYn8S/FJ8j9w0STChv+B/9OkwobOBz7JsKHTgU86bOhs4NMIGzoZ+LTChs4FPs2woVOBTzts6EzgsxA2dCLwWQkbTn3gsxQ2nOrAZy1sOLWBz2LYWZZlfwFda9qAQTmhZAAAAABJRU5ErkJggg==",
+         "redirectLink": "https://microsoft.sharepoint.com/sites/hrw/pages/home.aspx"
+      }
+   },
+   {
+      "id": "1563971149473",
+      "defaultState": {
+         "size": {
+            "height": 2,
+            "width": 2
+         },
+         "type": "link",
+         "redirectLink": "https://microsoft.sharepoint-df.com/:w:/s/FastConnectorIDC/ESIf34O-ou1Ft9mdPI74WVcBekf6YcDlbZ4lZ9z4l8Hq4g?e=bpNKad",
+         "bgColor": "#CE352C",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0zMC42NjY2NSwySDkuMzMzMjdBMS4zMzMzMiwxLjMzMzMyLDAsMCwwLDgsMy4zMzMzMVY5bDEyLDMuNUwzMiw5VjMuMzMzMzFBMS4zMzMzMywxLjMzMzMzLDAsMCwwLDMwLjY2NjY1LDJaIiBmaWxsPSIjNDFhNWVlIi8+PHBvbHlnb24gcG9pbnRzPSIzMiA5IDggOSA4IDE2IDIwIDE5LjUgMzIgMTYgMzIgOSIgZmlsbD0iIzJiN2NkMyIvPjxwb2x5Z29uIHBvaW50cz0iMzIgMTYgOCAxNiA4IDIzIDIwIDI2LjUgMzIgMjMgMzIgMTYiIGZpbGw9IiMxODVhYmQiLz48cGF0aCBkPSJNMzIsMjNIOHY1LjY2NjY2QTEuMzMzMzQsMS4zMzMzNCwwLDAsMCw5LjMzMzM0LDMwSDMwLjY2NjdBMS4zMzMzNCwxLjMzMzM0LDAsMCwwLDMyLDI4LjY2NjY2WiIgZmlsbD0iIzEwM2Y5MSIvPjxwYXRoIGQ9Ik0xNi42NjY2NSw3SDhWMjZoOC42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTgsMjQuNjY2NjNWOC4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTYuNjY2NjUsN1oiIG9wYWNpdHk9IjAuMSIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjdoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjUuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjVoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNC42NjY2NSw4SDhWMjVoNi42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTYsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTQuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGlkPSJCYWNrX1BsYXRlIiBkYXRhLW5hbWU9IkJhY2sgUGxhdGUiIGQ9Ik0xLjMzMzI5LDhIMTQuNjY2NjZBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDE2LDkuMzMzMzNWMjIuNjY2NjZBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDE0LjY2NjY1LDI0SDEuMzMzM0ExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMCwyMi42NjY2NlY5LjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxLjMzMzI5LDhaIiBmaWxsPSIjMTg1YWJkIi8+PHBhdGggaWQ9IkxldHRlciIgZD0iTTExLjk1LDIxaC0xLjhsLTIuMS02LjlMNS44NSwyMUg0LjA1bC0yLTEwaDEuOGwxLjQsNywyLjEtNi44aDEuNWwyLDYuOCwxLjQtN2gxLjdaIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iLTAuMDAwMDQiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=",
+         "title": "Search UX onboarding",
+         "fgColor": "#ffffff"
+      }
+   },
+   {
+      "id": "1563968155593",
+      "expandedState": {
+         "size": {
+            "width": 1,
+            "height": 1
+         },
+         "type": "link",
+         "title": "",
+         "bgColor": "#00aba9",
+         "fgColor": "#ffffff",
+         "iconClass": "location"
+      },
+      "defaultState": {
+         "size": {
+            "height": 4,
+            "width": 4
+         },
+         "type": "website",
+         "title": "Traffic",
+         "bgColor": "#00aba9",
+         "fgColor": "white",
+         "websiteLink": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15555.042115527685!2d77.64130293496599!3d12.923107068458227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3bae1376eba568c9%3A0xd9b5789350317ccd!2sPrestige+Ferns+Galaxy%2C+6%2F18%2C+Bellandur+Gate+Road%2C+Bellandur%2C+Bengaluru%2C+Karnataka+560103%2C+India!3m2!1d12.921477399999999!2d77.6690837!4m5!1s0x3bae1460743a4bfd%3A0x1258099b798adbe6!2sFloriana+Estates%2C+Koramangala+3rd+Block%2C+Sarjapur+Main+Rd%2C+Koramangala+1A+Block%2C+Koramangala+3+Block%2C+Koramangala%2C+Bengaluru%2C+Karnataka+560034%2C+India!3m2!1d12.9255456!2d77.6309986!5e0!3m2!1sen!2sin!4v1563948772457!5m2!1sen!2sin"
+      }
+   },
+   {
+      "id": "1563968511168",
+      "defaultState": {
+         "size": {
+            "width": 4,
+            "height": 2
+         },
+         "type": "adaptive-card",
+         "bgColor": "#9a1616",
+         "adaptiveCardConfig": {
+            "payload": {
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "speak": "Microsoft stock is trading at $62.30 a share, which is down .32%",
+               "body": [{
+                  "type": "Container",
+                  "items": [{
+                     "type": "Container",
+                     "items": [{
+                           "type": "TextBlock",
+                           "text": "{profile.companyName} ({symbol})",
+                           "size": "Large"
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{profile.exchange}",
+                           "spacing": "None"
+                        },
+                        {
+                           "type": "Container",
+                           "items": [{
+                              "type": "ColumnSet",
+                              "columns": [{
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [{
+                                       "type": "Image",
+                                       "url": "{profile.image}",
+                                       "size": "Small",
+                                       "backgroundColor": "transparent"
+                                    }],
+                                    "verticalContentAlignment": "Center"
+                                 },
+                                 {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [{
+                                          "type": "TextBlock",
+                                          "text": "{profile.price} USD",
+                                          "size": "ExtraLarge"
+                                       },
+                                       {
+                                          "type": "TextBlock",
+                                          "text": "{profile.changes} {profile.changesPercentage}",
+                                          "size": "Small",
+                                          "color": "Light",
+                                          "spacing": "None"
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }],
+                           "verticalContentAlignment": "Bottom"
+                        }
+                     ]
+                  }],
+                  "$data": "{data}"
+               }]
+            },
+            "dataSource": "https://financialmodelingprep.com/api/v3/company/profile/MSFT",
+            "auth": "no-auth"
+         },
+         "fgColor": "#ffffff"
+      }
+   },
+   {
+      "id": "1563971257008",
+      "defaultState": {
+         "size": {
+            "width": 2,
+            "height": 2
+         },
+         "type": "link",
+         "bgColor": "#128023",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik05LjMzMzE5LDJIMzAuNjY2NTZhMS4zMzMzMSwxLjMzMzMxLDAsMCwxLDEuMzMzMzEsMS4zMzMzMVYyOC42NjY2NkExLjMzMzMxLDEuMzMzMzEsMCwwLDEsMzAuNjY2NTYsMzBIOS4zMzMyNUExLjMzMzM3LDEuMzMzMzcsMCwwLDEsNy45OTk4OCwyOC42NjY2VjMuMzMzMzFBMS4zMzMzMSwxLjMzMzMxLDAsMCwxLDkuMzMzMTksMloiIGZpbGw9IiNjYTY0ZWEiLz48cGF0aCBkPSJNMzEuOTk5ODgsMy4zMzMzN0ExLjMzMzM0LDEuMzMzMzQsMCwwLDAsMzAuNjY2NSwyLjAwMDA2SDkuMzMzMTlBMS4zMzMyOCwxLjMzMzI4LDAsMCwwLDcuOTk5ODgsMy4zMzMzN1YyOC42NjY2OEExLjMzMzI5LDEuMzMzMjksMCwwLDAsOS4zMzMxOSwzMEgyNC45OTk4MkwzMS45OTk4OCw5LjAwMDA2WiIgZmlsbD0iI2NhNjRlYSIvPjxwb2x5Z29uIHBvaW50cz0iMzIgOSAyNSA5IDI1IDE2IDI4LjUgMTkuMTk1IDMyIDE2IDMyIDkiIGZpbGw9IiNhZTRiZDUiLz48cG9seWdvbiBwb2ludHM9IjMyIDE2IDI1IDE2IDI1IDIzIDI4LjUgMjYuMzk1IDMyIDIzIDMyIDE2IiBmaWxsPSIjOTMzMmJmIi8+PHBhdGggZD0iTTI0Ljk5OTg1LDIzaDdhMCwwLDAsMCwxLDAsMHY1LjY2NjY3QTEuMzMzMzMsMS4zMzMzMywwLDAsMSwzMC42NjY1MiwzMEgyNC45OTk4NWEwLDAsMCwwLDEsMCwwVjIzQTAsMCwwLDAsMSwyNC45OTk4NSwyM1oiIGZpbGw9IiM3NzE5YWEiLz48cGF0aCBkPSJNMTYuNjY2NjMsN0g4VjI2aDguNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE4LDI0LjY2NjYzVjguMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE2LjY2NjYzLDdaIiBvcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMTUuNjY2NjMsOEg4VjI3aDcuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE3LDI1LjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBkPSJNMTUuNjY2NjMsOEg4VjI1aDcuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE3LDIzLjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMTQuNjY2NjMsOEg4VjI1aDYuNjY2NjNBMS4zMzczMiwxLjMzNzMyLDAsMCwwLDE2LDIzLjY2NjYzVjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE0LjY2NjYzLDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBpZD0iQmFja19QbGF0ZSIgZGF0YS1uYW1lPSJCYWNrIFBsYXRlIiBkPSJNMS4zMzMzMyw4SDE0LjY2NjY5QTEuMzMzMzQsMS4zMzMzNCwwLDAsMSwxNiw5LjMzMzM0VjIyLjY2NjY2QTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxNC42NjY3LDI0SDEuMzMzMzRBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDAsMjIuNjY2NjZWOS4zMzMzM0ExLjMzMzMzLDEuMzMzMzMsMCwwLDEsMS4zMzMzMyw4WiIgZmlsbD0iIzc3MTlhYSIvPjxwYXRoIGQ9Ik00LjAwMTQ5LDExSDYuMTMxbDMuNjU2NDUsNi43MzE2M3EuMjg1NzUuNDM1NTQuNDI4NjIuNzAwNzZoLjAyNzIxYTkuNDkzMTQsOS40OTMxNCwwLDAsMS0uMDYxMjMtMS4zMjY2N1YxMWgxLjgxNjUyVjIxSDEwLjAwNTEzTDYuMTkyMiwxNC4zNzA3M2E1LjEzMzM2LDUuMTMzMzYsMCwwLDEtLjM4NzgtLjY4NzE0aC0uMDM0YTEzLjYyODIsMTMuNjI4MiwwLDAsMSwuMDU0NDIsMS40NTU5M1YyMUg0LjAwMTQ5WiIgZmlsbD0iI2ZmZiIvPjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=",
+         "redirectLink": "https://microsoft.sharepoint-df.com/teams/MicrosoftSearchUXBLR/_layouts/OneNote.aspx?id=%2Fteams%2FMicrosoftSearchUXBLR%2FSiteAssets%2FMicrosoft Search UX BLR Notebook&wd=target%28Customization.one%7C2496282F-CC78-42B5-A278-44AE7A37503F%2FDiscussions%7C9DB54244-E304-4BDF-AC0D-75240FBDDC01%2F%29",
+         "fgColor": "#ffffff",
+         "title": "Discussions"
+      }
+   },
+   {
+      "id": "1563971307256",
+      "defaultState": {
+         "size": {
+            "width": 2,
+            "height": 2
+         },
+         "type": "link",
+         "redirectLink": "https://microsoft.sharepoint-df.com/:p:/t/TimeManagement-Ideathon/EaqFyJkyibFDseMn1xfhoQ8B4rplwMltQ0e1q9TgeAvXgw?e=A6pCNw",
+         "bgColor": "#16499a",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0xNy45OTk2NCwyYTE0LjA0MTE0LDE0LjA0MTE0LDAsMCwwLTE0LDE0bDE3LjczNywzLjczN1oiIGZpbGw9IiNlZDZjNDciLz48cGF0aCBkPSJNMTcuOTk5NjQsMmExNC4wNDExNCwxNC4wNDExNCwwLDAsMSwxNCwxNGwtNyw0Ljc1NzkxLTctNC43NTc5MVoiIGZpbGw9IiNmZjhmNmIiLz48cGF0aCBkPSJNMTcuOTk5NjMsMzBhMTQuMDQxMTQsMTQuMDQxMTQsMCwwLDAsMTQtMTRoLTI4QTE0LjA0MTE1LDE0LjA0MTE1LDAsMCwwLDE3Ljk5OTYzLDMwWiIgZmlsbD0iI2QzNTIzMCIvPjxwYXRoIGQ9Ik0xNi42NjY0NCw3SDcuMzA1MTFhMTMuOTEzNjgsMTMuOTEzNjgsMCwwLDAsLjkzMDczLDE5aDguNDMwNmExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMS4zMzMzOC0xLjMzMzM3VjguMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE2LjY2NjQ0LDdaIiBvcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMTUuNjY2NDQsOEg2LjUzODc2QTEzLjkwNiwxMy45MDYsMCwwLDAsOS4zODQzNCwyN2g2LjI4MjFhMS4zMzczMiwxLjMzNzMyLDAsMCwwLDEuMzMzMzgtMS4zMzMzN1Y5LjMzMzMxQTEuMzM3MjcsMS4zMzcyNywwLDAsMCwxNS42NjY0NCw4WiIgb3BhY2l0eT0iMC4yIi8+PHBhdGggZD0iTTE1LjY2NjQ0LDhINi41Mzg3NmExMy44ODk5MSwxMy44ODk5MSwwLDAsMCwuNzY2MzUsMTdoOC4zNjEzM2ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMS4zMzMzOC0xLjMzMzM3VjkuMzMzMzFBMS4zMzcyNywxLjMzNzI3LDAsMCwwLDE1LjY2NjQ0LDhaIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBkPSJNMTQuNjY2NDQsOEg2LjUzODc2YTEzLjg4OTkxLDEzLjg4OTkxLDAsMCwwLC43NjYzNSwxN2g3LjM2MTMzYTEuMzM3MzIsMS4zMzczMiwwLDAsMCwxLjMzMzM4LTEuMzMzMzdWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTQuNjY2NDQsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGlkPSJCYWNrX1BsYXRlIiBkYXRhLW5hbWU9IkJhY2sgUGxhdGUiIGQ9Ik0xLjMzMzMzLDhIMTQuNjY2NjlBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDE2LDkuMzMzMzRWMjIuNjY2NjZBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDE0LjY2NjcsMjRIMS4zMzMzNEExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMCwyMi42NjY2NlY5LjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxLjMzMzMzLDhaIiBmaWxsPSIjYzQzZTFjIi8+PHBhdGggZD0iTTcuOTk3NSwxMWE0LjE2NzcxLDQuMTY3NzEsMCwwLDEsMi43NTQ4NC44MDUxLDIuODc3NTcsMi44Nzc1NywwLDAsMSwuOTU1NjIsMi4zMzEyOSwyLjcyNjA5LDIuNzI2MDksMCwwLDEtLjQ3MjU1LDEuNTg3MjQsMy4xNjM3MSwzLjE2MzcxLDAsMCwxLTEuMzQ0MTcsMS4xODY3Niw0LjU2OTc1LDQuNTY5NzUsMCwwLDEtMi4wMTk3Ni40MjM0NEg1Ljk2MDI1VjIxSDRWMTFaTTUuOTYwMjUsMTUuNjgzMTlINy42NDc0NmEyLjE5MzgyLDIuMTkzODIsMCwwLDAsMS40OTExOC0uNDQ0NDQsMS4xMDY2MiwxLjEwNjYyLDAsMCwwLC41MDQwNy0xLjAyNTM1cTAtMS42NTkyMS0xLjkzMjI1LTEuNjU5MjFINS45NjAyNVoiIGZpbGw9IiNmOWY3ZjciLz48cmVjdCB4PSIwLjAwMDAzIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiLz48L2c+PC9zdmc+",
+         "title": "Guardians of Activity",
+         "fgColor": "#ffffff"
+      }
+   },
+   {
+      "id": "1563971385279",
+      "defaultState": {
+         "size": {
+            "height": 2,
+            "width": 2
+         },
+         "type": "link",
+         "redirectLink": "https://microsoft.sharepoint.com/:w:/t/substratesearchapi/EXNKsFpqz8hGm6I4mdxbeK4BWFmaBUToBMVoz9kHopCvuw?e=qYofBM",
+         "bgColor": "#e3c800",
+         "imageSrc": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHRpdGxlPk9mZmljZUNvcmUxMF8zMnhfMjR4XzIweF8xNnhfMDEtMjItMjAxOTwvdGl0bGU+PGcgaWQ9IlNUWUxFX0NPTE9SIiBkYXRhLW5hbWU9IlNUWUxFID0gQ09MT1IiPjxwYXRoIGQ9Ik0zMC42NjY2NSwySDkuMzMzMjdBMS4zMzMzMiwxLjMzMzMyLDAsMCwwLDgsMy4zMzMzMVY5bDEyLDMuNUwzMiw5VjMuMzMzMzFBMS4zMzMzMywxLjMzMzMzLDAsMCwwLDMwLjY2NjY1LDJaIiBmaWxsPSIjNDFhNWVlIi8+PHBvbHlnb24gcG9pbnRzPSIzMiA5IDggOSA4IDE2IDIwIDE5LjUgMzIgMTYgMzIgOSIgZmlsbD0iIzJiN2NkMyIvPjxwb2x5Z29uIHBvaW50cz0iMzIgMTYgOCAxNiA4IDIzIDIwIDI2LjUgMzIgMjMgMzIgMTYiIGZpbGw9IiMxODVhYmQiLz48cGF0aCBkPSJNMzIsMjNIOHY1LjY2NjY2QTEuMzMzMzQsMS4zMzMzNCwwLDAsMCw5LjMzMzM0LDMwSDMwLjY2NjdBMS4zMzMzNCwxLjMzMzM0LDAsMCwwLDMyLDI4LjY2NjY2WiIgZmlsbD0iIzEwM2Y5MSIvPjxwYXRoIGQ9Ik0xNi42NjY2NSw3SDhWMjZoOC42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTgsMjQuNjY2NjNWOC4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTYuNjY2NjUsN1oiIG9wYWNpdHk9IjAuMSIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjdoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjUuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNS42NjY2NSw4SDhWMjVoNy42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTcsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTUuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNC42NjY2NSw4SDhWMjVoNi42NjY2M0ExLjMzNzMyLDEuMzM3MzIsMCwwLDAsMTYsMjMuNjY2NjNWOS4zMzMzMUExLjMzNzI3LDEuMzM3MjcsMCwwLDAsMTQuNjY2NjUsOFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGlkPSJCYWNrX1BsYXRlIiBkYXRhLW5hbWU9IkJhY2sgUGxhdGUiIGQ9Ik0xLjMzMzI5LDhIMTQuNjY2NjZBMS4zMzMzMywxLjMzMzMzLDAsMCwxLDE2LDkuMzMzMzNWMjIuNjY2NjZBMS4zMzMzNCwxLjMzMzM0LDAsMCwxLDE0LjY2NjY1LDI0SDEuMzMzM0ExLjMzMzM0LDEuMzMzMzQsMCwwLDEsMCwyMi42NjY2NlY5LjMzMzMzQTEuMzMzMzMsMS4zMzMzMywwLDAsMSwxLjMzMzI5LDhaIiBmaWxsPSIjMTg1YWJkIi8+PHBhdGggaWQ9IkxldHRlciIgZD0iTTExLjk1LDIxaC0xLjhsLTIuMS02LjlMNS44NSwyMUg0LjA1bC0yLTEwaDEuOGwxLjQsNywyLjEtNi44aDEuNWwyLDYuOCwxLjQtN2gxLjdaIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iLTAuMDAwMDQiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=",
+         "title": "[PM Spec] 3S Query Stack for UDT",
+         "fgColor": "#ffffff"
+      }
+   },
+   {
+      "id": "1563972248456",
+      "expandedState": {
+         "size": {
+            "width": 2,
+            "height": 2
+         },
+         "type": "link",
+         "title": "Ignite Keynote",
+         "bgColor": "#CE352C",
+         "fgColor": "#ffffff",
+         "iconClass": "youtube"
+      },
+      "defaultState": {
+         "size": {
+            "width": 5,
+            "height": 4
+         },
+         "type": "website",
+         "title": "Transform your workplace with Microsoft 365",
+         "bgColor": "#CE352C",
+         "fgColor": "#ffffff",
+         "websiteLink": "https://www.youtube.com/embed/5HRKWW5jGBo"
+      }
+   }, {
+      "defaultState": {
+         "size": {
+            "height": 1,
+            "width": 1
+         },
+         "type": "link",
+         "bgColor": "#637586",
+         "fgColor": "#ffffff",
+         "iconClass": "add"
+      },
+      "size": {
+         "height": 1,
+         "width": 1
+      },
+      "id": "system-tile-add"
+   },
+   {
+      "id": "tile-news",
+      "defaultState": {
+         "size": {
+            "height": 2,
+            "width": 2
+         },
+         "type": "link",
+         "title": "Latest News",
+         "bgColor": "#16499a",
+         "fgColor": "white",
+         "iconClass": "news"
+      },
+      "expandedState": {
+         "size": {
+            "width": 5,
+            "height": 5
+         },
+         "type": "website",
+         "title": "Latest News",
+         "bgColor": "#16499a",
+         "fgColor": "white",
+         "websiteLink": "https://tech.economictimes.indiatimes.com/widget/technology"
+      }
+   },
+   {
+      "id": "tile-mails",
+      "defaultState": {
+         "size": {
+            "width": 6,
+            "height": 2
+         },
+         "type": "adaptive-card",
+         "bgColor": "#ffffff",
+         "fgColor": "#000000",
+         "iconClass": null,
+         "title": null,
+         "websiteLink": null,
+         "badge": null,
+         "imgSrc": null,
+         "adaptiveCardConfig": {
+            "payload": {
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                  "type": "Container",
+                  "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
+                                 "size": "Small"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "Inbox",
+                                 "size": "ExtraLarge",
+                                 "weight": "Bolder",
+                                 "color": "Accent"
+                              }]
+                           }
+                        ]
+                     },
+                     {
+                        "type": "Container",
+                        "items": [{
+                              "type": "TextBlock",
+                              "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
+                              "weight": "Bolder",
+                              "size": "Medium",
+                              "maxLines": 1,
+                              "separator": true,
+                              "wrap": true,
+                              "spacing": "None"
+                           },
+                           {
+                              "type": "TextBlock",
+                              "text": "{subject}",
+                              "maxLines": 1,
+                              "wrap": true,
+                              "weight": "Bolder",
+                              "spacing": "None"
+                           },
+                           {
+                              "type": "TextBlock",
+                              "text": "{bodyPreview}",
+                              "maxLines": 1,
+                              "size": "Small",
+                              "wrap": true,
+                              "spacing": "Small"
+                           }
+                        ],
+                        "spacing": "Small",
+                        "verticalContentAlignment": "Center",
+                        "$data": "{value}",
+                        "selectAction": {
+                           "type": "Action.OpenUrl",
+                           "url": "{webLink}",
+                           "title": "redirect"
+                        },
+                        "backgroundImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
+                        "minHeight": "7px",
+                        "separator": true
+                     }
+                  ],
+                  "spacing": "None",
+                  "style": "default",
+                  "bleed": true
+               }],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0//me/mailFolders('Inbox')/messages",
+            "auth": "graph"
+         }
+      },
+      "expandedState": {
+         "size": {
+            "width": 6,
+            "height": 6
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                  "type": "Container",
+                  "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
+                                 "size": "Small"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "Inbox",
+                                 "size": "ExtraLarge",
+                                 "weight": "Bolder",
+                                 "color": "Accent"
+                              }]
+                           }
+                        ]
+                     },
+                     {
+                        "type": "Container",
+                        "items": [{
+                              "type": "TextBlock",
+                              "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
+                              "weight": "Bolder",
+                              "size": "Medium",
+                              "maxLines": 2,
+                              "separator": true,
+                              "wrap": true
+                           },
+                           {
+                              "type": "TextBlock",
+                              "text": "{subject}",
+                              "maxLines": 2,
+                              "wrap": true,
+                              "weight": "Bolder",
+                              "spacing": "Small"
+                           },
+                           {
+                              "type": "TextBlock",
+                              "text": "{bodyPreview}",
+                              "maxLines": 2,
+                              "wrap": true,
+                              "spacing": "Small"
+                           }
+                        ],
+                        "spacing": "Small",
+                        "verticalContentAlignment": "Center",
+                        "$data": "{value}",
+                        "selectAction": {
+                           "type": "Action.OpenUrl",
+                           "url": "{webLink}",
+                           "title": "redirect"
+                        },
+                        "backgroundImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
+                        "minHeight": "7px",
+                        "separator": true
+                     }
+                  ],
+                  "spacing": "None",
+                  "style": "default",
+                  "bleed": true
+               }],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0//me/mailFolders('Inbox')/messages",
+            "auth": "graph"
+         }
+      }
+   },
+   {
+      "id": "1563963309116",
+      "defaultState": {
+         "size": {
+            "width": 6,
+            "height": 2
+         },
+         "type": "adaptive-card",
+         "bgColor": "#ffffff",
+         "fgColor": "#16499a",
+         "iconClass": null,
+         "title": null,
+         "redirectLink": "{\"dataSource\":\"https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=$$today$$T00:00:00.167Z&enddatetime=$$today$$T11:59:59.16\",\"type\":\"AdaptiveCard\",\"version\":\"1.0\",\"body\":[{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"50px\",\"items\":[{\"type\":\"Image\",\"altText\":\"\",\"width\":\"40px\",\"url\":\"https://store-images.s-microsoft.com/image/apps.10465.9007199266367162.63ae4a2f-83bb-47b5-9314-a061b0de5d94.c031d0ac-cec0-4fe3-a0c9-c929f60d3035?mode=scale&q=90&h=270&w=270&background=%230078D7\",\"spacing\":\"None\",\"style\":\"Person\",\"height\":\"40px\"}]},{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"Today\",\"size\":\"ExtraLarge\",\"weight\":\"Bolder\",\"color\":\"Accent\"}]}]},{\"type\":\"Container\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"{subject}\",\"weight\":\"Bolder\",\"size\":\"medium\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"{location.displayName}\",\"wrap\":true},{\"type\":\"TextBlock\",\"text\":\"{{TIME({substr(start.dateTime,0,19)}Z)}} - {{TIME({substr(end.dateTime,0,19)}Z)}}\",\"wrap\":true}],\"$data\":\"{value}\",\"style\":\"emphasis\",\"selectAction\":{\"type\":\"Action.OpenUrl\",\"url\":\"{webLink}\"},\"separator\":true,\"backgroundImage\":{\"url\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC\",\"fillMode\":\"Repeat\"},\"spacing\":\"Small\",\"$when\":\"{value}\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\"}",
+         "websiteLink": null,
+         "badge": null,
+         "imgSrc": null,
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=$$today$$T00:00:00.167Z&enddatetime=$$today$$T11:59:59.16",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "ColumnSet",
+                     "columns": [{
+                           "type": "Column",
+                           "width": "50px",
+                           "items": [{
+                              "type": "Image",
+                              "width": "40px",
+                              "url": "https://store-images.s-microsoft.com/image/apps.10465.9007199266367162.63ae4a2f-83bb-47b5-9314-a061b0de5d94.c031d0ac-cec0-4fe3-a0c9-c929f60d3035?mode=scale&q=90&h=270&w=270&background=%230078D7",
+                              "spacing": "None",
+                              "style": "Person",
+                              "height": "40px"
+                           }]
+                        },
+                        {
+                           "type": "Column",
+                           "width": "stretch",
+                           "items": [{
+                              "type": "TextBlock",
+                              "text": "Today",
+                              "size": "ExtraLarge",
+                              "weight": "Bolder",
+                              "color": "Accent"
+                           }]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                           "type": "TextBlock",
+                           "text": "{subject}",
+                           "weight": "Bolder",
+                           "size": "Medium",
+                           "spacing": "None"
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{location.displayName}",
+                           "spacing": "None"
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{{TIME({substr(start.dateTime,0,19)}Z)}} - {{TIME({substr(end.dateTime,0,19)}Z)}}",
+                           "spacing": "None"
+                        }
+                     ],
+                     "$data": "{value}",
+                     "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "{webLink}"
+                     },
+                     "spacing": "None",
+                     "$when": "",
+                     "separator": true,
+                     "style": "emphasis"
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=2019-07-24T00:00:00.167Z&enddatetime=2019-07-24T11:59:59.16",
+            "auth": "graph"
+         }
+      },
+      "expandedState": {
+         "size": {
+            "height": 5,
+            "width": 6
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=$$today$$T00:00:00.167Z&enddatetime=$$today$$T11:59:59.16",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "ColumnSet",
+                     "columns": [{
+                           "type": "Column",
+                           "width": "50px",
+                           "items": [{
+                              "type": "Image",
+                              "altText": "",
+                              "width": "40px",
+                              "url": "https://store-images.s-microsoft.com/image/apps.10465.9007199266367162.63ae4a2f-83bb-47b5-9314-a061b0de5d94.c031d0ac-cec0-4fe3-a0c9-c929f60d3035?mode=scale&q=90&h=270&w=270&background=%230078D7",
+                              "spacing": "None",
+                              "style": "Person",
+                              "height": "40px"
+                           }]
+                        },
+                        {
+                           "type": "Column",
+                           "width": "stretch",
+                           "items": [{
+                              "type": "TextBlock",
+                              "text": "Today",
+                              "size": "ExtraLarge",
+                              "weight": "Bolder",
+                              "color": "Accent"
+                           }]
+                        }
+                     ]
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                           "type": "TextBlock",
+                           "text": "{subject}",
+                           "weight": "Bolder",
+                           "size": "medium",
+                           "wrap": true
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{location.displayName}",
+                           "wrap": true
+                        },
+                        {
+                           "type": "TextBlock",
+                           "text": "{{TIME({substr(start.dateTime,0,19)}Z)}} - {{TIME({substr(end.dateTime,0,19)}Z)}}",
+                           "wrap": true
+                        }
+                     ],
+                     "$data": "{value}",
+                     "style": "emphasis",
+                     "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "{webLink}"
+                     },
+                     "separator": true,
+                     "backgroundImage": {
+                        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
+                        "fillMode": "Repeat"
+                     },
+                     "spacing": "Small",
+                     "$when": "{value}"
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0/me/calendarview?startdatetime=2019-07-24T00:00:00.167Z&enddatetime=2019-07-24T11:59:59.16",
+            "auth": "graph"
+         }
+      }
+   },
+   {
+      "id": "1563965373617",
+      "defaultState": {
+         "size": {
+            "height": 2,
+            "width": 4
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://graph.microsoft.com/v1.0/me/planner/tasks",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/gnome-todo-icon.png",
+                                 "size": "Small"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "Planner Tasks",
+                                 "size": "Large",
+                                 "color": "Accent",
+                                 "weight": "Bolder"
+                              }],
+                              "verticalContentAlignment": "Center"
+                           }
+                        ]
+                     }]
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "Input.Toggle",
+                                 "title": "{title}",
+                                 "wrap": false,
+                                 "validation": {
+                                    "necessity": "Required",
+                                    "errorMessage": "Error message"
+                                 },
+                                 "value": "Pending",
+                                 "id": "taskId",
+                                 "valueOn": "Done",
+                                 "valueOff": "Pending"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "{checklistItemCount}"
+                              }]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true,
+                     "$when": "{percentComplete = 0}",
+                     "spacing": "Medium"
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0/me/planner/tasks",
+            "auth": "graph"
+         },
+         "additionalClass": "item-list",
+         "bgColor": "#fffdd0 ",
+         "fgColor": "#000000"
+      },
+      "expandedState": {
+         "size": {
+            "width": 6,
+            "height": 6
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://graph.microsoft.com/v1.0/me/planner/tasks",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/gnome-todo-icon.png",
+                                 "size": "Small"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "Planner Tasks",
+                                 "size": "Large",
+                                 "color": "Accent",
+                                 "weight": "Bolder"
+                              }],
+                              "verticalContentAlignment": "Center"
+                           }
+                        ]
+                     }]
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [{
+                                 "type": "Input.Toggle",
+                                 "title": "{title}",
+                                 "wrap": false,
+                                 "validation": {
+                                    "necessity": "Required",
+                                    "errorMessage": "Error message"
+                                 },
+                                 "value": "Pending",
+                                 "id": "taskId",
+                                 "valueOn": "Done",
+                                 "valueOff": "Pending"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "TextBlock",
+                                 "text": "{checklistItemCount}"
+                              }]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true,
+                     "$when": "{percentComplete = 0}",
+                     "spacing": "Medium"
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://graph.microsoft.com/v1.0/me/planner/tasks",
+            "auth": "graph"
+         },
+         "bgColor": "#fffdd0 "
+      }
+   },
+   {
+      "id": "1563966844145",
+      "defaultState": {
+         "size": {
+            "width": 5,
+            "height": 2
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "TextBlock",
+                     "text": "Created by me",
+                     "size": "Large",
+                     "weight": "Bolder"
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "{createdBy.imageUrl}",
+                                 "size": "Small",
+                                 "style": "Person"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [{
+                                    "type": "Container",
+                                    "items": [{
+                                       "type": "TextBlock",
+                                       "text": "{title}",
+                                       "weight": "Bolder",
+                                       "wrap": true
+                                    }],
+                                    "selectAction": {
+                                       "type": "Action.OpenUrl",
+                                       "url": "/pullrequest/{pullRequestId}"
+                                    }
+                                 },
+                                 {
+                                    "type": "ColumnSet",
+                                    "columns": [{
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://git-scm.com/images/logos/logomark-orange@2x.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{repository.name}",
+                                             "weight": "Lighter"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://marketplace.canva.com/MACVidyAYhE/1/screen/canva-git-branch-tool-icon-vector-illustration-MACVidyAYhE.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{targetRefName}",
+                                             "weight": "Lighter"
+                                          }]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+            "auth": "vsts",
+            "linkBase": "https://dev.azure.com/msfast/FAST/_git/Midgard"
+         },
+         "additionalClass": "item-list",
+         "bgColor": "#f0a30a",
+         "fgColor": "#000000"
+      },
+      "expandedState": {
+         "size": {
+            "width": 5,
+            "height": 4
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "TextBlock",
+                     "text": "Created by me",
+                     "size": "Large",
+                     "weight": "Bolder"
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "{createdBy.imageUrl}",
+                                 "size": "Small",
+                                 "style": "Person"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [{
+                                    "type": "Container",
+                                    "items": [{
+                                       "type": "TextBlock",
+                                       "text": "{title}",
+                                       "weight": "Bolder",
+                                       "wrap": true
+                                    }],
+                                    "selectAction": {
+                                       "type": "Action.OpenUrl",
+                                       "url": "/pullrequest/{pullRequestId}"
+                                    }
+                                 },
+                                 {
+                                    "type": "ColumnSet",
+                                    "columns": [{
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://git-scm.com/images/logos/logomark-orange@2x.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{repository.name}",
+                                             "weight": "Lighter"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://marketplace.canva.com/MACVidyAYhE/1/screen/canva-git-branch-tool-icon-vector-illustration-MACVidyAYhE.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{targetRefName}",
+                                             "weight": "Lighter"
+                                          }]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+            "auth": "vsts",
+            "linkBase": "https://dev.azure.com/msfast/FAST/_git/Midgard"
+         },
+         "bgColor": "#f0a30a"
+      }
+   },
+   {
+      "id": "1563967304130",
+      "defaultState": {
+         "size": {
+            "width": 5,
+            "height": 2
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "TextBlock",
+                     "text": "Assigned to me",
+                     "size": "Large",
+                     "weight": "Bolder"
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "{createdBy.imageUrl}",
+                                 "size": "Small",
+                                 "style": "Person"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [{
+                                    "type": "Container",
+                                    "items": [{
+                                       "type": "TextBlock",
+                                       "text": "{title}",
+                                       "weight": "Bolder",
+                                       "wrap": true
+                                    }],
+                                    "selectAction": {
+                                       "type": "Action.OpenUrl",
+                                       "url": "/pullrequest/{pullRequestId}"
+                                    }
+                                 },
+                                 {
+                                    "type": "ColumnSet",
+                                    "columns": [{
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://git-scm.com/images/logos/logomark-orange@2x.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{repository.name}",
+                                             "weight": "Lighter"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://marketplace.canva.com/MACVidyAYhE/1/screen/canva-git-branch-tool-icon-vector-illustration-MACVidyAYhE.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{targetRefName}",
+                                             "weight": "Lighter"
+                                          }]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.reviewerId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+            "auth": "vsts",
+            "linkBase": "https://dev.azure.com/msfast/FAST/_git/Midgard"
+         },
+         "additionalClass": "item-list",
+         "fgColor": "#000000",
+         "bgColor": "#ffffff"
+      },
+      "expandedState": {
+         "size": {
+            "width": 5,
+            "height": 4
+         },
+         "type": "adaptive-card",
+         "adaptiveCardConfig": {
+            "payload": {
+               "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.creatorId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+               "type": "AdaptiveCard",
+               "version": "1.0",
+               "body": [{
+                     "type": "TextBlock",
+                     "text": "Assigned to me",
+                     "size": "Large",
+                     "weight": "Bolder"
+                  },
+                  {
+                     "type": "Container",
+                     "items": [{
+                        "type": "ColumnSet",
+                        "columns": [{
+                              "type": "Column",
+                              "width": "50px",
+                              "items": [{
+                                 "type": "Image",
+                                 "url": "{createdBy.imageUrl}",
+                                 "size": "Small",
+                                 "style": "Person"
+                              }]
+                           },
+                           {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [{
+                                    "type": "Container",
+                                    "items": [{
+                                       "type": "TextBlock",
+                                       "text": "{title}",
+                                       "weight": "Bolder",
+                                       "wrap": true
+                                    }],
+                                    "selectAction": {
+                                       "type": "Action.OpenUrl",
+                                       "url": "/pullrequest/{pullRequestId}"
+                                    }
+                                 },
+                                 {
+                                    "type": "ColumnSet",
+                                    "columns": [{
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://git-scm.com/images/logos/logomark-orange@2x.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{repository.name}",
+                                             "weight": "Lighter"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "Image",
+                                             "url": "https://marketplace.canva.com/MACVidyAYhE/1/screen/canva-git-branch-tool-icon-vector-illustration-MACVidyAYhE.png",
+                                             "width": "15px",
+                                             "height": "15px"
+                                          }]
+                                       },
+                                       {
+                                          "type": "Column",
+                                          "width": "auto",
+                                          "items": [{
+                                             "type": "TextBlock",
+                                             "text": "{targetRefName}",
+                                             "weight": "Lighter"
+                                          }]
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     }],
+                     "$data": "{value}",
+                     "separator": true
+                  }
+               ],
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            },
+            "dataSource": "https://dev.azure.com/msfast/FAST/_apis/git/repositories/Midgard/pullrequests?api-version=5.0&searchCriteria.reviewerId=40fe7aea-6740-6835-9c6f-ad749909c7f4",
+            "auth": "vsts",
+            "linkBase": "https://dev.azure.com/msfast/FAST/_git/Midgard"
+         }
+      }
+   }
+]

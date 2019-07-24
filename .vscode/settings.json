@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/8114122a-988b-4561-a171-66bd58b291b4/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/officeHome",
+    "appService.deploySubpath": ""
+}

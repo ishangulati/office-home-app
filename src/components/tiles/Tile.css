@@ -1,0 +1,16 @@
+.tile-item {
+  overflow-y: auto;
+}
+.tile-small .branding-bar {
+  line-height: 43px;
+  font-size: 0.8em;
+}
+
+.tile-small .icon {
+  height: 44%;
+  font-size: 30px;
+}
+
+.tiles-group::before{
+   font-size: 20px;
+}

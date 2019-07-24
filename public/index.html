@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link href="/css/metro.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/markdown-it.min.js"></script>
+    <link href="/css/metro-icons.css" rel="stylesheet" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style>
+      .add-title-panel {
+        position: absolute;
+      }
+      .add-title-main-panel {
+        height: 100vh;
+      }
+      .add-title-panel-save {
+        margin: auto;
+      }
+      .start-screen {
+        min-width: 100%;
+        height: 100%;
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 90px;
+      }
+      .start-screen-title-container {
+        position: fixed;
+        top: 20px;
+        left: 12px;
+      }
+      .start-screen-title {
+        font-weight: lighter;
+        font-size: 40px;
+        margin: 1rem 0;
+        line-height: 1.7;
+      }
+      [class*="tile-"] {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      .tiles-group {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+      .tiles-group .ms-layer {
+        display: none;
+      }
+      .btn {
+        padding-left: 5px;
+      }
+      .btn-danger {
+        padding-left: 25px;
+      }
+      @media all and (min-width: 768px) {
+        .start-screen-title {
+          font-size: 48px;
+        }
+        .start-screen {
+          padding: 140px 50px 0 0;
+        }
+        .start-screen-title-container {
+          left: 50px;
+        }
+        .tiles-group {
+          left: 100px;
+        }
+        .tiles-group {
+          margin-left: 50px;
+        }
+      }
+      .ac-container.ac-adaptiveCard:focus {
+        outline: none;
+      }
+    </style>
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 8px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+      </style>
+    <title>Office Home</title>
+  </head>
+  <!-- <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  -->
+  <body class="bg-dark fg-white h-vh-100" style="opacity: 1;">
+    <div
+      id="root"
+      class="container-fluid start-screen h-100"
+      style="overflow:auto"
+    ></div>
+  </body>
+</html>
