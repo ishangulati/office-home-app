@@ -65,56 +65,57 @@ class SidePanel extends React.Component<
 
   renderFooter = (): JSX.Element => {
     return (
-      <Stack>
-          <PrimaryButton
-            onClick={() => {
-              const groupId: string =
-                (this.props.selectedTileId &&
-                  this.props.selectedTileId.split("@")[0]) ||
-                "";
-              const tileId: string =
-                (this.props.selectedTileId &&
-                  this.props.selectedTileId.split("@")[1]) ||
-                "";
-              const isAdd: boolean = tileId === "system-tile-add";
-              saveTileConfigs(
-                groupId,
-                {
-                  ...this.state.config
-                },
-                isAdd,
-                () => {
-                  this.props.refreshParent && this.props.refreshParent();
-                  this.props.deselectTile && this.props.deselectTile();
-                }
-              );
-            }}
-          >
-            Save
-          </PrimaryButton>{" "}
-          <DefaultButton
-            disabled={
+      <>
+        <PrimaryButton
+          onClick={() => {
+            const groupId: string =
               (this.props.selectedTileId &&
-                this.props.selectedTileId.split("@")[1]) === "system-tile-add"
-            }
-            onClick={() => {
-              const groupId: string =
-                (this.props.selectedTileId &&
-                  this.props.selectedTileId.split("@")[0]) ||
-                "";
-              const tileId: string =
-                (this.props.selectedTileId &&
-                  this.props.selectedTileId.split("@")[1]) ||
-                "";
-              deleteTileFromGroup(groupId, tileId, () => {
+                this.props.selectedTileId.split("@")[0]) ||
+              "";
+            const tileId: string =
+              (this.props.selectedTileId &&
+                this.props.selectedTileId.split("@")[1]) ||
+              "";
+            const isAdd: boolean = tileId === "system-tile-add";
+            saveTileConfigs(
+              groupId,
+              {
+                ...this.state.config
+              },
+              isAdd,
+              () => {
                 this.props.refreshParent && this.props.refreshParent();
                 this.props.deselectTile && this.props.deselectTile();
-              });
-            }}
-          >
-            Delete
-          </DefaultButton>
-      </Stack>
+              }
+            );
+          }}
+        >
+          Save
+        </PrimaryButton>{" "}
+        <DefaultButton
+          disabled={
+            (this.props.selectedTileId &&
+              this.props.selectedTileId.split("@")[1]) === "system-tile-add"
+          }
+          onClick={() => {
+            const groupId: string =
+              (this.props.selectedTileId &&
+                this.props.selectedTileId.split("@")[0]) ||
+              "";
+            const tileId: string =
+              (this.props.selectedTileId &&
+                this.props.selectedTileId.split("@")[1]) ||
+              "";
+            deleteTileFromGroup(groupId, tileId, () => {
+              this.props.refreshParent && this.props.refreshParent();
+              this.props.deselectTile && this.props.deselectTile();
+            });
+          }}
+        >
+          Delete
+        </DefaultButton>
+        <div style={{ marginBottom: 55 }} />
+      </>
     );
   };
 
@@ -766,8 +767,8 @@ class SidePanel extends React.Component<
               <Tile {...{ defaultState: tileState, id: "1" }} />
             </TilesGroup>
           </Stack.Item>
-          {this.renderFooter()}
         </Stack>
+        {this.renderFooter()}
       </>
     );
   };
