@@ -20,6 +20,10 @@
       .add-title-panel {
         position: absolute;
       }
+      .ms-Panel.is-open {
+        position: absolute;
+        height: 100vh;
+      }
       .add-title-main-panel {
         height: 100vh;
       }
@@ -87,23 +91,26 @@
       ::-webkit-scrollbar {
         width: 8px;
       }
-      
+
       /* Track */
       ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f1f1f1;
       }
-       
+
       /* Handle */
       ::-webkit-scrollbar-thumb {
-        background: #888; 
+        background: #888;
         border-radius: 8px;
       }
-      
+
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #555;
       }
-      </style>
+      .ms-Layer-content > div {
+        overflow-y: visible !important;
+      }
+    </style>
     <title>Office Home</title>
   </head>
   <!-- <body>

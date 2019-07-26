@@ -1,5 +1,4 @@
-[
-   {
+[{
       "id": "1563969158865",
       "defaultState": {
          "size": {
@@ -445,71 +444,63 @@
                "body": [{
                   "type": "Container",
                   "items": [{
-                        "type": "ColumnSet",
-                        "columns": [{
-                              "type": "Column",
-                              "width": "50px",
-                              "items": [{
-                                 "type": "Image",
-                                 "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
-                                 "size": "Small"
-                              }]
-                           },
-                           {
-                              "type": "Column",
-                              "width": "stretch",
-                              "items": [{
-                                 "type": "TextBlock",
-                                 "text": "Inbox",
-                                 "size": "ExtraLarge",
-                                 "weight": "Bolder",
-                                 "color": "Accent"
-                              }]
-                           }
-                        ]
-                     },
-                     {
-                        "type": "Container",
+                     "type": "ColumnSet",
+                     "columns": [{
+                        "type": "Column",
+                        "width": "50px",
                         "items": [{
-                              "type": "TextBlock",
-                              "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
-                              "weight": "Bolder",
-                              "size": "Medium",
-                              "maxLines": 1,
-                              "separator": true,
-                              "wrap": true,
-                              "spacing": "None"
-                           },
-                           {
-                              "type": "TextBlock",
-                              "text": "{subject}",
-                              "maxLines": 1,
-                              "wrap": true,
-                              "weight": "Bolder",
-                              "spacing": "None"
-                           },
-                           {
-                              "type": "TextBlock",
-                              "text": "{bodyPreview}",
-                              "maxLines": 1,
-                              "size": "Small",
-                              "wrap": true,
-                              "spacing": "Small"
-                           }
-                        ],
-                        "spacing": "Small",
-                        "verticalContentAlignment": "Center",
-                        "$data": "{value}",
-                        "selectAction": {
-                           "type": "Action.OpenUrl",
-                           "url": "{webLink}",
-                           "title": "redirect"
-                        },
-                        "backgroundImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
-                        "minHeight": "7px",
-                        "separator": true
-                     }
-                  ],
+                           "type": "Image",
+                           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
+                           "size": "Small"
+                        }]
+                     }, {
+                        "type": "Column",
+                        "width": "stretch",
+                        "items": [{
+                           "type": "TextBlock",
+                           "text": "Inbox",
+                           "size": "ExtraLarge",
+                           "weight": "Bolder",
+                           "color": "Accent"
+                        }]
+                     }]
+                  }, {
+                     "type": "Container",
+                     "items": [{
+                        "type": "TextBlock",
+                        "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
+                        "weight": "Bolder",
+                        "size": "Medium",
+                        "maxLines": 1,
+                        "separator": true,
+                        "wrap": true,
+                        "spacing": "None"
+                     }, {
+                        "type": "TextBlock",
+                        "text": "{subject}",
+                        "maxLines": 1,
+                        "wrap": true,
+                        "weight": "Bolder",
+                        "spacing": "None"
+                     }, {
+                        "type": "TextBlock",
+                        "text": "{bodyPreview}",
+                        "maxLines": 1,
+                        "size": "Small",
+                        "wrap": true,
+                        "spacing": "Small"
+                     }],
+                     "spacing": "Small",
+                     "verticalContentAlignment": "Center",
+                     "$data": "{value}",
+                     "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "{webLink}",
+                        "title": "redirect"
+                     },
+                     "minHeight": "7px",
+                     "separator": true
+                  }],
                   "spacing": "None",
                   "style": "default",
                   "bleed": true
@@ -533,69 +524,60 @@
                "body": [{
                   "type": "Container",
                   "items": [{
-                        "type": "ColumnSet",
-                        "columns": [{
-                              "type": "Column",
-                              "width": "50px",
-                              "items": [{
-                                 "type": "Image",
-                                 "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
-                                 "size": "Small"
-                              }]
-                           },
-                           {
-                              "type": "Column",
-                              "width": "stretch",
-                              "items": [{
-                                 "type": "TextBlock",
-                                 "text": "Inbox",
-                                 "size": "ExtraLarge",
-                                 "weight": "Bolder",
-                                 "color": "Accent"
-                              }]
-                           }
-                        ]
-                     },
-                     {
-                        "type": "Container",
+                     "type": "ColumnSet",
+                     "columns": [{
+                        "type": "Column",
+                        "width": "50px",
                         "items": [{
-                              "type": "TextBlock",
-                              "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
-                              "weight": "Bolder",
-                              "size": "Medium",
-                              "maxLines": 2,
-                              "separator": true,
-                              "wrap": true
-                           },
-                           {
-                              "type": "TextBlock",
-                              "text": "{subject}",
-                              "maxLines": 2,
-                              "wrap": true,
-                              "weight": "Bolder",
-                              "spacing": "Small"
-                           },
-                           {
-                              "type": "TextBlock",
-                              "text": "{bodyPreview}",
-                              "maxLines": 2,
-                              "wrap": true,
-                              "spacing": "Small"
-                           }
-                        ],
-                        "spacing": "Small",
-                        "verticalContentAlignment": "Center",
-                        "$data": "{value}",
-                        "selectAction": {
-                           "type": "Action.OpenUrl",
-                           "url": "{webLink}",
-                           "title": "redirect"
-                        },
-                        "backgroundImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC",
-                        "minHeight": "7px",
-                        "separator": true
-                     }
-                  ],
+                           "type": "Image",
+                           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png",
+                           "size": "Small"
+                        }]
+                     }, {
+                        "type": "Column",
+                        "width": "stretch",
+                        "items": [{
+                           "type": "TextBlock",
+                           "text": "Inbox",
+                           "size": "ExtraLarge",
+                           "weight": "Bolder",
+                           "color": "Accent"
+                        }]
+                     }]
+                  }, {
+                     "type": "Container",
+                     "items": [{
+                        "type": "TextBlock",
+                        "text": "{sender.emailAddress.name} <{sender.emailAddress.address}>",
+                        "weight": "Bolder",
+                        "size": "Medium",
+                        "maxLines": 2,
+                        "separator": true,
+                        "wrap": true
+                     }, {
+                        "type": "TextBlock",
+                        "text": "{subject}",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "weight": "Bolder",
+                        "spacing": "Small"
+                     }, {
+                        "type": "TextBlock",
+                        "text": "{bodyPreview}",
+                        "maxLines": 2,
+                        "wrap": true,
+                        "spacing": "Small"
+                     }],
+                     "verticalContentAlignment": "Center",
+                     "$data": "{value}",
+                     "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "{webLink}",
+                        "title": "redirect"
+                     },
+                     "minHeight": "7px",
+                     "separator": true
+                  }],
                   "spacing": "None",
                   "style": "default",
                   "bleed": true

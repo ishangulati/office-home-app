@@ -65,56 +65,56 @@ class SidePanel extends React.Component<
 
   renderFooter = (): JSX.Element => {
     return (
-      <>
-        <PrimaryButton
-          onClick={() => {
-            const groupId: string =
+      <Stack>
+          <PrimaryButton
+            onClick={() => {
+              const groupId: string =
+                (this.props.selectedTileId &&
+                  this.props.selectedTileId.split("@")[0]) ||
+                "";
+              const tileId: string =
+                (this.props.selectedTileId &&
+                  this.props.selectedTileId.split("@")[1]) ||
+                "";
+              const isAdd: boolean = tileId === "system-tile-add";
+              saveTileConfigs(
+                groupId,
+                {
+                  ...this.state.config
+                },
+                isAdd,
+                () => {
+                  this.props.refreshParent && this.props.refreshParent();
+                  this.props.deselectTile && this.props.deselectTile();
+                }
+              );
+            }}
+          >
+            Save
+          </PrimaryButton>{" "}
+          <DefaultButton
+            disabled={
               (this.props.selectedTileId &&
-                this.props.selectedTileId.split("@")[0]) ||
-              "";
-            const tileId: string =
-              (this.props.selectedTileId &&
-                this.props.selectedTileId.split("@")[1]) ||
-              "";
-            const isAdd: boolean = tileId === "system-tile-add";
-            saveTileConfigs(
-              groupId,
-              {
-                ...this.state.config
-              },
-              isAdd,
-              () => {
+                this.props.selectedTileId.split("@")[1]) === "system-tile-add"
+            }
+            onClick={() => {
+              const groupId: string =
+                (this.props.selectedTileId &&
+                  this.props.selectedTileId.split("@")[0]) ||
+                "";
+              const tileId: string =
+                (this.props.selectedTileId &&
+                  this.props.selectedTileId.split("@")[1]) ||
+                "";
+              deleteTileFromGroup(groupId, tileId, () => {
                 this.props.refreshParent && this.props.refreshParent();
                 this.props.deselectTile && this.props.deselectTile();
-              }
-            );
-          }}
-        >
-          Save
-        </PrimaryButton>{" "}
-        <DefaultButton
-          disabled={
-            (this.props.selectedTileId &&
-              this.props.selectedTileId.split("@")[1]) === "system-tile-add"
-          }
-          onClick={() => {
-            const groupId: string =
-              (this.props.selectedTileId &&
-                this.props.selectedTileId.split("@")[0]) ||
-              "";
-            const tileId: string =
-              (this.props.selectedTileId &&
-                this.props.selectedTileId.split("@")[1]) ||
-              "";
-            deleteTileFromGroup(groupId, tileId, () => {
-              this.props.refreshParent && this.props.refreshParent();
-              this.props.deselectTile && this.props.deselectTile();
-            });
-          }}
-        >
-          Delete
-        </DefaultButton>
-      </>
+              });
+            }}
+          >
+            Delete
+          </DefaultButton>
+      </Stack>
     );
   };
 
@@ -142,7 +142,6 @@ class SidePanel extends React.Component<
           type={PanelType.medium}
           onDismiss={this.props.deselectTile}
           headerText={"Tile Behaviour"}
-          onRenderFooterContent={() => this.renderFooter()}
         >
           {!this.state.preview ? (
             <Pivot
@@ -160,7 +159,11 @@ class SidePanel extends React.Component<
               {this.state.config.expandedState ? (
                 <PivotItem itemIcon="Delete" itemKey="-" />
               ) : (
-                <PivotItem itemIcon="Add" itemKey="+" headerText="Click State" />
+                <PivotItem
+                  itemIcon="Add"
+                  itemKey="+"
+                  headerText="Click State"
+                />
               )}
             </Pivot>
           ) : (
@@ -763,6 +766,7 @@ class SidePanel extends React.Component<
               <Tile {...{ defaultState: tileState, id: "1" }} />
             </TilesGroup>
           </Stack.Item>
+          {this.renderFooter()}
         </Stack>
       </>
     );
